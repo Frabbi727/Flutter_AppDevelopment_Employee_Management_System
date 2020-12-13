@@ -83,21 +83,27 @@ class EmployeeDrawer extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               child: Center(
-                child: MaterialButton(
-                  minWidth: 150,
-                  elevation: 10,
-                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  color: Colors.lightGreenAccent,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomePage()));
-                  },
-                  textColor: Colors.black,
-                  child: Text(
-                    'Sign Out',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                child: SizedBox(
+                  height: 50,
+                  width: 150,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    elevation: 10,
+                    color: Colors.lightGreenAccent,
+                    splashColor: Colors.white,
+                    child: Text(
+                      'Sign Out',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => HomePage()));
+                    },
                   ),
                 ),
               ),

@@ -95,6 +95,9 @@ class _AdvanceApplicationFormState extends State<AdvanceApplicationForm> {
                       height: 50,
                       width: 150,
                       child: RaisedButton(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
                         elevation: 10,
                         color: Colors.lightGreenAccent,
                         splashColor: Colors.white,
@@ -114,6 +117,9 @@ class _AdvanceApplicationFormState extends State<AdvanceApplicationForm> {
                       height: 50,
                       width: 150,
                       child: RaisedButton(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
                         elevation: 10,
                         color: Colors.lightGreenAccent,
                         splashColor: Colors.white,
