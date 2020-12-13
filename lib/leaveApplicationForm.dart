@@ -1,29 +1,28 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'homePage.dart';
+import 'employeePortal.dart';
 
-class CreatNewAccount extends StatefulWidget {
+class LeaveApplicationForm extends StatefulWidget {
   @override
-  _CreatNewAccountState createState() => _CreatNewAccountState();
+  _LeaveApplicationFormState createState() => _LeaveApplicationFormState();
 }
 
-class _CreatNewAccountState extends State<CreatNewAccount> {
+class _LeaveApplicationFormState extends State<LeaveApplicationForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.cyan,
       appBar: AppBar(
-        title: Text('Create New Account'),
+        backgroundColor: Colors.black12,
+        title: Text('Leave Application Form'),
       ),
-      backgroundColor: Colors.blueGrey,
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.only(top: 10),
                   alignment: Alignment.center,
                   decoration: (BoxDecoration(
                     color: Colors.white,
@@ -33,117 +32,7 @@ class _CreatNewAccountState extends State<CreatNewAccount> {
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       fillColor: Colors.white,
-                      labelText: 'Name',
-                      hintStyle: TextStyle(color: Colors.black),
-                      prefixIcon: Icon(
-                        Icons.drive_file_rename_outline,
-                        color: Colors.lightGreen[800],
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  decoration: (BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30),
-                  )),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      fillColor: Colors.white,
-                      labelText: 'Email',
-                      hintStyle: TextStyle(color: Colors.black),
-                      prefixIcon: Icon(
-                        Icons.email,
-                        color: Colors.lightGreen[800],
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  decoration: (BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30),
-                  )),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      fillColor: Colors.white,
-                      labelText: 'Phone ',
-                      hintStyle: TextStyle(color: Colors.black),
-                      prefixIcon: Icon(
-                        Icons.phone,
-                        color: Colors.lightGreen[800],
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  decoration: (BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30),
-                  )),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      fillColor: Colors.white,
-                      labelText: 'Password',
-                      hintStyle: TextStyle(color: Colors.black),
-                      prefixIcon: Icon(
-                        Icons.lock,
-                        color: Colors.lightGreen[800],
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  decoration: (BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30),
-                  )),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      fillColor: Colors.white,
-                      labelText: 'Gender',
-                      hintStyle: TextStyle(color: Colors.black),
-                      prefixIcon: Icon(
-                        Icons.people,
-                        color: Colors.lightGreen[800],
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  decoration: (BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30),
-                  )),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      fillColor: Colors.white,
-                      labelText: 'Dob',
+                      labelText: 'Start Date',
                       hintStyle: TextStyle(color: Colors.black),
                       prefixIcon: Icon(
                         Icons.date_range,
@@ -165,10 +54,10 @@ class _CreatNewAccountState extends State<CreatNewAccount> {
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       fillColor: Colors.white,
-                      labelText: 'Designation',
+                      labelText: 'End Date',
                       hintStyle: TextStyle(color: Colors.black),
                       prefixIcon: Icon(
-                        Icons.design_services,
+                        Icons.date_range_rounded,
                         color: Colors.lightGreen[800],
                       ),
                     ),
@@ -187,10 +76,32 @@ class _CreatNewAccountState extends State<CreatNewAccount> {
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       fillColor: Colors.white,
-                      labelText: 'Address',
+                      labelText: ' Reason ',
                       hintStyle: TextStyle(color: Colors.black),
                       prefixIcon: Icon(
-                        Icons.location_city,
+                        Icons.text_fields,
+                        color: Colors.lightGreen[800],
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  decoration: (BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30),
+                  )),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      fillColor: Colors.white,
+                      labelText: ' Apply Date ',
+                      hintStyle: TextStyle(color: Colors.black),
+                      prefixIcon: Icon(
+                        Icons.date_range_outlined,
                         color: Colors.lightGreen[800],
                       ),
                     ),
@@ -210,17 +121,14 @@ class _CreatNewAccountState extends State<CreatNewAccount> {
                         color: Colors.lightGreenAccent,
                         splashColor: Colors.white,
                         child: Text(
-                          'Back',
+                          'Save As Draft',
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => HomePage()));
+                          //Do something Here
                         },
                       ),
                     ),
@@ -242,7 +150,7 @@ class _CreatNewAccountState extends State<CreatNewAccount> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomePage()));
+                                  builder: (context) => EmployeePortal()));
                         },
                       ),
                     ),

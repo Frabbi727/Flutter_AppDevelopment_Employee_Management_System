@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                     },
                     textColor: Colors.black,
                     child: Text(
-                      'Creat new Account',
+                      'Create new Account',
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
